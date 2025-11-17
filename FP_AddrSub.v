@@ -243,7 +243,7 @@ module fp_add_sub (
     assign pack_r    = mant_a_reg[1];
     assign pack_s    = mant_a_reg[0];
     
-    fp_packer u_packer (
+    FP_Packer packer (
         .res_sign(s_res_reg),
         .res_exp(exp_res_reg),
         .res_frac_23(pack_frac),
@@ -255,3 +255,4 @@ module fp_add_sub (
     );
 
 endmodule
+
